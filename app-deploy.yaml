@@ -38,9 +38,10 @@ metadata:
     image.opencontainers.org/title: myrestservice
     stack.appsody.dev/version: 0.2.19
   name: myrestservice
+  namespace: gowtham
 spec:
-  applicationImage: dev.local/myrestservice
-  createKnativeService: false
+  applicationImage: docker-registry.default.svc:5000/gowtham/myrestservice
+  createKnativeService: true
   expose: true
   livenessProbe:
     failureThreshold: 12
